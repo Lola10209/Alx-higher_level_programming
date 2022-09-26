@@ -11,4 +11,4 @@ def new_in_list(my_list, idx, element):
                 del new[i]
                 new.insert(idx, element)
                 return (new)
-            return (None)
+        return (None)
