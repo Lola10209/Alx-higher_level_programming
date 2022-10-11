@@ -8,7 +8,7 @@ class Square:
     Defines a Square and its basic properties
 
     >>> square_1 = Square()
-    >>>> square_2 = Square(7)
+    >>> square_2 = Square(7)
     """
 
     def ___init__(self, size=0) -> None:
