@@ -4,8 +4,8 @@ Creates a Square class.
 """
 
 
-BaseGeometry = _import_('7-base_geometry').BaseGeometry
-Rectangle = _import_('9-rectangle').Rectangle
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -15,18 +15,18 @@ class Square(Rectangle):
     Inherits from Rectangle.
     """
 
-    def _init_(self, size):
+    def __init__(self, size):
         """Initializes a Square.
         Args:
             - size: size of the square
         """
 
         self.integer_validator("size", size)
-        super()._init_(size, size)
+        super().__init__(size, size)
         self.__size = size
 
     def _str_(self):
-        return super()._str_()
+        return super().__str__()
 
     def area(self):
         """Computes the area of a Square instance.

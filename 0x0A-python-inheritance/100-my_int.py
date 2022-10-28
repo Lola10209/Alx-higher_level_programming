@@ -9,12 +9,12 @@ class MyInt(int):
     But reverses the behavior of != and ==.
     """
 
-    def _eq_(self, other):
+    def __eq__(self, other):
         """Equality becomes inequality."""
 
-        return super()._ne_(other)
+        return super().__ne__(other)
 
-    def _ne_(self, other):
+    def __ne__(self, other):
         """Inequality becomes equality."""
 
-        return super()._eq_(other)
+        return super().__eq__(other)

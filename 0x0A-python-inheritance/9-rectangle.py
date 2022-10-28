@@ -4,7 +4,7 @@ Creates a Rectangle class.
 """
 
 
-BaseGeometry = _import_('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
     Inherits from BaseGeometry.
     """
 
-    def _init_(self, width, height):
+    def __init__(self, width, height):
         """Initializes an instance.
         Args:
             - width: width of the rectangle
@@ -28,14 +28,14 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def _str_(self):
+    def __str__(self):
         """Returns a formatted string."""
 
-        return str("[Rectangle] {}/{}".format(self._width, self._height))
+        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def area(self):
         """Computes the area of the Rectangle instance.
         Overwrites the area() method from BaseGeometry.
         """
 
-        return self._width * self._height
+        return self.__width * self.__height

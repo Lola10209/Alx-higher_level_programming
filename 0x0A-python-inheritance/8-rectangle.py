@@ -4,7 +4,7 @@ Creates a Rectangle class.
 """
 
 
-BaseGeometry = _import_('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -15,7 +15,7 @@ class Rectangle(BaseGeometry):
     Inherits from BaseGeometry.
     """
 
-    def _init_(self, width, height):
+    def __init__(self, width, height):
         """Initializes an instance.
         Args:
             - width: width of the rectangle
